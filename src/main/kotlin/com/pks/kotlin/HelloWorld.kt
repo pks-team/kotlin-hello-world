@@ -4,8 +4,12 @@ package com.pks.kotlin
  * @author Martin Varga
  */
 class HelloWorld(val greeting: String) {
+    fun createGreeting(name: String): String {
+        return "$greeting, $name!"
+    }
+
     fun sayHello(name: String) {
-        print("$greeting, $name!")
+        print(createGreeting(name))
     }
 
     companion object {
